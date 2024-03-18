@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
+/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:43 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/18 21:56:03 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/19 00:46:46 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ class Animal{
     protected:
         std::string _type;
     public:
-        Animal() = default;
+        Animal();
         Animal(const Animal &copy);
-        ~Animal() = default;
+        ~Animal();
         Animal &operator = (const Animal &copy);
         virtual void makeSound();
+        std::string getType();
 };
 
 #endif
