@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:43 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:08:48 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:21:33 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal{
     public:
         Animal();
         Animal(const Animal &copy);
-        ~Animal();
+        virtual ~Animal();
         Animal &operator = (const Animal &copy);
         virtual void makeSound() const;
         std::string getType() const;

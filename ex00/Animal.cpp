@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:36 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:06:42 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:23:07 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Animal::Animal(const Animal &copy)
 
 Animal::~Animal()
 {
-    std::cout << "Default Destuructor called\n";
+    std::cout << "Default Animal Destuructor called\n";
 }
 
 Animal &Animal::operator=(const Animal &copy)
@@ -38,3 +38,5 @@ std::string Animal::getType() const
 {
     return (_type);
 }
+
+void Animal::makeSound()const {}

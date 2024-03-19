@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:21 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:09:23 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:26:03 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Cat::Cat()
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "Default Cat constructor called\n";
+	this->_type = "cat";
 }
 
 Cat::Cat(const Cat &copy):Animal(copy)
@@ -32,7 +33,7 @@ Cat &Cat::operator=(const Cat &copy)
 
 Cat::~Cat()
 {
-	std::cout << "Default destructor called\n";
+	std::cout << "Default Cat destructor called\n";
 }
 
 void Cat::makeSound() const

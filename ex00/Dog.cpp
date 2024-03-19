@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:06 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:09:18 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:25:54 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Dog::Dog()
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "Default Dog constructor called\n";
+	this->_type = "dog";
 }
 
 Dog::Dog(const Dog &copy):Animal(copy)
@@ -32,7 +33,7 @@ Dog &Dog::operator=(const Dog &copy)
 
 Dog::~Dog()
 {
-	std::cout << "Default destructor called\n";
+	std::cout << "Default Dog destructor called\n";
 }
 
 void Dog::makeSound() const
