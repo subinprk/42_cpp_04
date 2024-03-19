@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:36 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 00:47:18 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:06:42 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Animal &Animal::operator=(const Animal &copy)
     return (*this);
 }
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
     return (_type);
 }

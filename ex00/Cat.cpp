@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:21 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 00:48:24 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/19 02:09:23 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Cat::~Cat()
 	std::cout << "Default destructor called\n";
 }
 
-void Cat::makeSound()
+void Cat::makeSound() const
 {
 	std::cout << "Cat: meow\n";
 }
