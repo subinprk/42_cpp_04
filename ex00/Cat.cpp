@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:21 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:26:03 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/23 21:39:51 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &copy):Animal(copy)
 {
-	//std::cout << "Cat copy constructer\n";
+	std::cout << "Cat copy constructer\n";
 	this->_type = "cat";
 }
 
