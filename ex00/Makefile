@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: siun <siun@student.42.fr>                  +#+  +:+       +#+         #
+#    By: subpark <subpark@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 21:44:46 by subpark           #+#    #+#              #
-#    Updated: 2024/03/19 00:45:38 by siun             ###   ########.fr        #
+#    Updated: 2024/04/03 10:20:44 by subpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp
-HDRS = Animal.hpp Cat.hpp Dog.hpp
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
+HDRS = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:09:11 by siun             ###   ########.fr       */
+/*   Updated: 2024/04/03 12:24:43 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : public Animal{
         Cat(const Cat &copy);
         Cat &operator=(const Cat &copy);
         ~Cat();
-        void makeSound() const;
+        void makeSound() const override;
 };
 
 #endif

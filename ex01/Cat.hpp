@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/29 17:43:55 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 12:21:24 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 #include "Brain.hpp"
 
 class Cat : public Animal{
+    private:
+        Brain *_brain;
     public:
         Cat();
         Cat(const Cat &copy);
         Cat &operator=(const Cat &copy);
         ~Cat();
-        void makeSound() const;
+        void makeSound() const override;
 };
 
 #endif

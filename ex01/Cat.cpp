@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:21 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:26:03 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/29 17:57:13 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Cat::Cat()
 Cat::Cat(const Cat &copy):Animal(copy)
 {
 	//std::cout << "Cat copy constructer\n";
+	_brain = new Brain();
 	this->_type = "cat";
 }
 
@@ -33,6 +34,7 @@ Cat &Cat::operator=(const Cat &copy)
 
 Cat::~Cat()
 {
+	delete []_brain;
 	std::cout << "Default Cat destructor called\n";
 }
 

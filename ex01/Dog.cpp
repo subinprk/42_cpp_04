@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:06 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:25:54 by siun             ###   ########.fr       */
+/*   Updated: 2024/04/03 12:19:44 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Dog::Dog()
 Dog::Dog(const Dog &copy):Animal(copy)
 {
 	//std::cout << "Dog copy constructer\n";
+	_brain = new Brain();
 	this->_type = "dog";
 }
 
@@ -34,9 +35,10 @@ Dog &Dog::operator=(const Dog &copy)
 Dog::~Dog()
 {
 	std::cout << "Default Dog destructor called\n";
+	delete []_brain;
 }
 
-void Dog::makeSound() const
+void Dog::makeSound() override const
 {
 	std::cout << "Dog: woof, woof \n";
 }
