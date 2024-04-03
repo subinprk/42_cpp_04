@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:15 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:20:59 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 14:07:43 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Dog : public Animal{
         Dog(const Dog &copy);
         Dog &operator=(const Dog &copy);
         ~Dog();
-		void makeSound() const override;
+		void makeSound() const;
 };
 
 #endif

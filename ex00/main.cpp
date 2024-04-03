@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:09 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:28:34 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 12:45:58 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,25 @@
 
 int main()
 {
-	const Animal* animal = new Animal();
+	const Animal *meta = new Animal();
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
+
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	meta->makeSound();
+
+	std::cout << std::endl;
+	delete meta;
+	delete i;
+	delete j;
+// 	delete wrong_cat;
+// 	delete wrong_animal;
+}
+
+/*	const Animal* animal = new Animal();
 	const Animal* animal_ptr;
 	const Animal* dog = new Dog();
 	const Animal* dog_ptr;
@@ -42,21 +60,14 @@ int main()
 	wanimal->makeSound();
 	wrongcat->makeSound();
 
-	// wcat_p = wanimal;
-	// wcat_p->makeSound();
-
-	// std::cout << std::endl;
-	// const WrongAnimal* wrong_animal = new WrongAnimal();
-	// const WrongAnimal* wrong_cat = new WrongCat();
-
-	// std::cout << std::endl;
-	// wrong_cat->makeSound();
-	// wrong_animal->makeSound();
+	wcat_p = wanimal;
+	wcat_p->makeSound();
 
 	std::cout << std::endl;
-	delete animal;
-	delete dog;
-	delete cat;
-// 	delete wrong_cat;
-// 	delete wrong_animal;
-}
+	const WrongAnimal* wrong_animal = new WrongAnimal();
+	const WrongAnimal* wrong_cat = new WrongCat();
+
+	std::cout << std::endl;
+	wrong_cat->makeSound();
+	wrong_animal->makeSound();
+*/

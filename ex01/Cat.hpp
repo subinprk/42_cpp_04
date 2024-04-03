@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:26 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:21:24 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 12:53:18 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat : public Animal{
         Cat(const Cat &copy);
         Cat &operator=(const Cat &copy);
         ~Cat();
-        void makeSound() const override;
+        void makeSound() const;
 };
 
 #endif

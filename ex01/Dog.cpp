@@ -6,39 +6,46 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:06 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:19:44 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 14:17:23 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog()
 {
 	std::cout << "Default Dog constructor called\n";
+	_brain = new Brain();
 	this->_type = "dog";
 }
 
 Dog::Dog(const Dog &copy):Animal(copy)
 {
-	//std::cout << "Dog copy constructer\n";
-	_brain = new Brain();
+	_brain = new Brain(*copy._brain);
+	std::cout << "Dog copy constructer\n";
 	this->_type = "dog";
 }
 
 Dog &Dog::operator=(const Dog &copy)
 {
-	std::cout << "Assignment operator of Dog class is called\n";
-	Animal::operator=(copy);
+	if (this != &copy)
+	{
+		std::cout << "Assignment operator of Dog class is called\n";
+		Animal::operator=(copy);
+		delete _brain;
+		_brain = new Brain(*copy._brain);
+	}
 	return (*this);
 }
 
 Dog::~Dog()
 {
+	delete(_brain);
 	std::cout << "Default Dog destructor called\n";
-	delete []_brain;
 }
 
-void Dog::makeSound() override const
+void Dog::makeSound() const
 {
 	std::cout << "Dog: woof, woof \n";
 }

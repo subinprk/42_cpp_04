@@ -3,43 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:09 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:10:06 by siun             ###   ########.fr       */
+/*   Updated: 2024/04/03 14:18:03 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Animal.hpp"
-
-
-int main( void )
+#include "WrongCat.hpp"
+int main()
 {
-	const Animal* animal = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	const Animal *meta = new Animal();
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
+
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	meta->makeSound();
 
 	std::cout << std::endl;
-	std::cout << "Dog->getType [" << dog->getType() << "] " << std::endl;
-	std::cout << "Cat->getType [" << cat->getType() << "] " << std::endl;
-	cat->makeSound(); //will output the cat sound! (not the Animal)
-	dog->makeSound(); //will output the dog sound! (not the Animal)
-	animal->makeSound(); //will output the animal sound
+	delete meta;
+	delete i;
+	delete j;
 
-	// std::cout << std::endl;
-	// const WrongAnimal* wrong_animal = new WrongAnimal();
-	// const WrongAnimal* wrong_cat = new WrongCat();
+	std::cout << "--------------------------\n";
 
-	// std::cout << std::endl;
-	// wrong_cat->makeSound();
-	// wrong_animal->makeSound();
+	Cat basic;
+	Cat tmp = basic;
 
-	std::cout << std::endl;
-	delete animal;
-	delete dog;
-	delete cat;
-// 	delete wrong_cat;
-// 	delete wrong_animal;
+	Cat tmp1(basic);
+
+	std::cout << "--------------------------\n";
 }

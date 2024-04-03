@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:36 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:25:10 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/03 14:22:00 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    std::cout << "Default constructor called\n";
+    std::cout << "Default Animal constructor called\n";
 }
 
 Animal::Animal(const Animal &copy)
@@ -30,6 +30,7 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &copy)
 {
+    std::cout << "Assignment operator of Animal\n";
     _type = copy._type;
     return (*this);
 }

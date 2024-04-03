@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:36 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:23:07 by siun             ###   ########.fr       */
+/*   Updated: 2024/04/03 14:14:07 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    std::cout << "Default constructor called\n";
+    std::cout << "Default Animal constructor called\n";
 }
 
 Animal::Animal(const Animal &copy)
@@ -39,4 +39,6 @@ std::string Animal::getType() const
     return (_type);
 }
 
-void Animal::makeSound()const {}
+void Animal::makeSound()const {
+    std::cout << "Animal Sound\n";
+}
