@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:43 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 16:17:06 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/27 21:31:08 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 #include <iostream>
 
 class Animal{
-    private:
-
-    protected:
-        std::string _type;
     public:
         Animal();
         Animal(const Animal &copy);
@@ -27,6 +23,8 @@ class Animal{
         Animal &operator = (const Animal &copy);
         virtual void makeSound() const = 0;
         std::string getType() const;
+    protected:
+        std::string _type;
 };
 
 #endif
