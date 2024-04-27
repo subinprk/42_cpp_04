@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:43 by subpark           #+#    #+#             */
-/*   Updated: 2024/03/19 02:21:33 by siun             ###   ########.fr       */
+/*   Updated: 2024/04/27 20:15:05 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 #include <iostream>
 
 class Animal{
-    private:
-
-    protected:
-        std::string _type;
     public:
         Animal();
         Animal(const Animal &copy);
@@ -27,6 +23,9 @@ class Animal{
         Animal &operator = (const Animal &copy);
         virtual void makeSound() const;
         std::string getType() const;
+    protected:
+        std::string _type;
+    private:
 };
 
 #endif

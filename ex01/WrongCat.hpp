@@ -6,13 +6,14 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 21:43:16 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 10:21:59 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/27 21:00:57 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
 #define WRONGCAT_HPP
 #include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
 class WrongCat: public WrongAnimal
 {
@@ -22,6 +23,8 @@ class WrongCat: public WrongAnimal
         WrongCat &operator=(const WrongCat &copy);
         ~WrongCat();
         void makeSound() const;
+    private:
+        Brain *_brain;
 };
 
 #endif

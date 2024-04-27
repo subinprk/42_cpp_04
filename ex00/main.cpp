@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:09 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 12:45:58 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/27 20:54:33 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int main()
 	const Animal *meta = new Animal();
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();
+	const WrongAnimal *wrong_cat = new WrongCat();
+	const WrongAnimal *wrong_animal = new WrongAnimal();
+	const WrongCat kitty= WrongCat();
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
@@ -27,12 +30,16 @@ int main()
 	j->makeSound();
 	meta->makeSound();
 
+	wrong_animal->makeSound();
+	wrong_cat->makeSound();
+	kitty.makeSound();
+
 	std::cout << std::endl;
 	delete meta;
 	delete i;
 	delete j;
-// 	delete wrong_cat;
-// 	delete wrong_animal;
+	delete wrong_cat;
+	delete wrong_animal;
 }
 
 /*	const Animal* animal = new Animal();

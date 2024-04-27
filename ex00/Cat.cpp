@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:21 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 13:56:16 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/27 16:53:35 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ Cat &Cat::operator=(const Cat &copy)
 	{
 		std::cout << "Assignment operator of Cat class is called\n";
 		Animal::operator=(copy);
-		return (*this);
 	}
+	return (*this);
 }
 
 Cat::~Cat()

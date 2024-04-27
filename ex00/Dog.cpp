@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:45:06 by subpark           #+#    #+#             */
-/*   Updated: 2024/04/03 14:21:53 by subpark          ###   ########.fr       */
+/*   Updated: 2024/04/27 16:53:16 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ Dog &Dog::operator=(const Dog &copy)
 	{
 		std::cout << "Assignment operator of Dog class is called\n";
 		Animal::operator=(copy);
-		return (*this);
 	}
+	return (*this);
 }
 
 Dog::~Dog()
